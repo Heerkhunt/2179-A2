@@ -1,11 +1,210 @@
-.card,.callout{background:#fffdf9;border:1px solid #efdcc8;border-radius:22px;padding:18px;box-shadow:0 10px 30px rgba(71,43,20,.08);overflow:visible;min-height:340px}.vega-embed,.vega-embed svg{
-overflow:visible !important
+* {
+  box-sizing: border-box;
 }
 
-#vis1,#vis2,#vis3,#vis4,#vis5,#vis6,#vis7,#vis8,#vis9,#vis10,#vis11,#vis12,#vis13{
-width:100%
+body {
+  margin: 0;
+  background: #fff9f2;
+  color: #2b1a12;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.55;
 }
 
-#vis3{
-min-height:340px
+.hero,
+.section,
+.metadata {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero {
+  padding: 56px 32px 28px;
+}
+
+.eyebrow {
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8c6040;
+  font-weight: 800;
+  font-size: 13px;
+}
+
+h1 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 64px;
+  line-height: 1;
+  margin: 8px 0 14px;
+}
+
+h2 {
+  font-family: Fraunces, Georgia, serif;
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+h3 {
+  margin-top: 0;
+}
+
+.subtitle {
+  font-size: 20px;
+  max-width: 760px;
+}
+
+.kpis {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.kpis div {
+  background: #3b2415;
+  color: #fff;
+  padding: 18px;
+  border-radius: 18px;
+}
+
+.kpis b {
+  font-size: 30px;
+  display: block;
+}
+
+.kpis span {
+  font-size: 13px;
+  color: #f6dabe;
+}
+
+.section {
+  margin-bottom: 34px;
+  padding: 26px 32px;
+  border-top: 1px solid #ead8c5;
+}
+
+.section > p {
+  max-width: 760px;
+  margin-top: 0;
+  color: #5c4737;
+}
+
+.grid {
+  display: grid;
+  gap: 22px;
+  align-items: start;
+}
+
+.grid.two {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+
+.card,
+.callout {
+  border: 1px solid #efdcc8;
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 10px 30px rgba(71, 43, 20, 0.08);
+  min-width: 0;
+}
+
+.card {
+  background: #fffdf9;
+  overflow: hidden;
+  min-height: 360px;
+}
+
+.callout {
+  background: #3b2415;
+  color: #fff;
+  min-height: 210px;
+}
+
+.callout p {
+  color: #f6dabe;
+}
+
+.wide {
+  grid-column: 1 / -1;
+  min-height: 430px;
+}
+
+/* Vega chart fitting fixes */
+.vega-embed {
+  width: 100%;
+  max-width: 100%;
+}
+
+.vega-embed svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Prevent legends and labels from creating horizontal scroll */
+#vis1,
+#vis2,
+#vis3,
+#vis4,
+#vis5,
+#vis6,
+#vis7,
+#vis8,
+#vis9,
+#vis10,
+#vis11,
+#vis12,
+#vis13 {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Extra space for charts that need vertical room */
+#vis3,
+#vis4,
+#vis6,
+#vis7,
+#vis10,
+#vis13 {
+  min-height: 310px;
+}
+
+#vis8,
+#vis9,
+#vis11,
+#vis12 {
+  min-height: 280px;
+}
+
+.metadata {
+  margin-bottom: 60px;
+  padding: 26px 32px;
+  color: #5c4737;
+}
+
+.metadata h2 {
+  color: #2b1a12;
+}
+
+@media (max-width: 850px) {
+  h1 {
+    font-size: 44px;
+  }
+
+  .grid.two,
+  .kpis {
+    grid-template-columns: 1fr;
+  }
+
+  .hero,
+  .section,
+  .metadata {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .card,
+  .callout {
+    min-height: auto;
+  }
 }
