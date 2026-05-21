@@ -1,0 +1,26 @@
+age_group,coffee_type,percentage
+14–24,Latte,34
+14–24,Flat white,24
+14–24,Cappuccino,21
+14–24,Espresso,9
+14–24,Long black,12
+25–34,Latte,32
+25–34,Flat white,29
+25–34,Cappuccino,18
+25–34,Espresso,11
+25–34,Long black,10
+35–49,Latte,24
+35–49,Flat white,31
+35–49,Cappuccino,22
+35–49,Espresso,12
+35–49,Long black,11
+50–64,Latte,16
+50–64,Flat white,27
+50–64,Cappuccino,28
+50–64,Espresso,13
+50–64,Long black,16
+65+,Latte,10
+65+,Flat white,20
+65+,Cappuccino,31
+65+,Espresso,15
+65+,Long black,24

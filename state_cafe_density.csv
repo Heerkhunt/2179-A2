@@ -1,0 +1,9 @@
+state_full,state,cafe_count,population,cafes_per_100k,lon,lat
+New South Wales,NSW,2265,8624534,26.27,147.0,-32.0
+Victoria,VIC,2418,7104349,34.04,144.0,-37.0
+Queensland,QLD,1596,5692642,28.04,144.0,-22.5
+South Australia,SA,652,1908182,34.17,135.0,-30.0
+Western Australia,WA,914,3061672,29.85,122.0,-25.0
+Tasmania,TAS,248,576659,43.01,146.5,-42.0
+Northern Territory,NT,82,265457,30.89,133.0,-19.0
+Australian Capital Territory,ACT,214,486231,44.01,149.0,-35.3

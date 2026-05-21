@@ -1,0 +1,8 @@
+source,target,x,y,x2,y2,weight
+Age,Frequency,100,120,260,60,3
+Age,Type,100,120,260,210,2
+Frequency,Takeaway,260,60,420,120,3
+Takeaway,Spending,420,120,500,260,4
+Type,Spending,260,210,500,260,2
+Home,Frequency,100,260,260,60,2
+Home,Spending,100,260,500,260,1

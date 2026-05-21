@@ -1,0 +1,31 @@
+age_group,behaviour,strength
+14–24,Daily,41
+14–24,Takeaway,58
+14–24,Latte,34
+14–24,Flat white,24
+14–24,Home-made,42
+14–24,High spend,48
+25–34,Daily,54
+25–34,Takeaway,62
+25–34,Latte,32
+25–34,Flat white,29
+25–34,Home-made,38
+25–34,High spend,61
+35–49,Daily,58
+35–49,Takeaway,53
+35–49,Latte,24
+35–49,Flat white,31
+35–49,Home-made,47
+35–49,High spend,55
+50–64,Daily,64
+50–64,Takeaway,39
+50–64,Latte,16
+50–64,Flat white,27
+50–64,Home-made,61
+50–64,High spend,46
+65+,Daily,62
+65+,Takeaway,28
+65+,Latte,10
+65+,Flat white,20
+65+,Home-made,72
+65+,High spend,38
