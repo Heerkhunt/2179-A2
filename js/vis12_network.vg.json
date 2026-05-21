@@ -10,7 +10,7 @@
   "layer": [
     {
       "data": {
-        "url": "../data/network_links.csv"
+        "url": "data/network_links.csv"
       },
       "mark": {
         "type": "rule",
@@ -54,7 +54,7 @@
     },
     {
       "data": {
-        "url": "../data/network_nodes.csv"
+        "url": "data/network_nodes.csv"
       },
       "mark": {
         "type": "circle",
@@ -82,7 +82,7 @@
     },
     {
       "data": {
-        "url": "../data/network_nodes.csv"
+        "url": "data/network_nodes.csv"
       },
       "mark": {
         "type": "text",
