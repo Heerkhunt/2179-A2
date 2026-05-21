@@ -208,3 +208,18 @@ h3 {
     min-height: auto;
   }
 }
+.vega-embed svg text {
+  font-family: Inter, Arial, sans-serif !important;
+}
+
+.vega-embed svg .mark-text text {
+  font-family: Inter, Arial, sans-serif !important;
+}
+
+.vega-embed {
+  font-family: Inter, Arial, sans-serif !important;
+}
+
+.vega-embed svg {
+  overflow: visible !important;
+}
