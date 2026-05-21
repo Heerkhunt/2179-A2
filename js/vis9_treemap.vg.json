@@ -2,14 +2,14 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {"type": "fit", "contains": "padding"},
   "width": 430,
-"height": 300,
+  "height": 300,
   "title": {
     "text": "Where Coffee Money Goes",
     "subtitle": "Pre-computed treemap blocks show spending share across coffee categories.",
     "anchor": "start"
   },
   "data": {
-    "url": "data/spending_treemap.csv"
+    "url": "../data/spending_treemap.csv"
   },
   "layer": [
     {
@@ -55,18 +55,17 @@
       }
     },
     {
-  "mark": {
-    "type":"text",
-    "fontSize":12,
-    "fontWeight":"bold",
-    "limit":90,
-    "ellipsis":"…",
-    "color":"#2b1a12"
-  },
-  "encoding": {
-    "text": {"field":"category"}
-  }
-},
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "fontSize": 14,
+        "color": "#3B2415"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
         "y": {
           "field": "y",
           "type": "quantitative"
