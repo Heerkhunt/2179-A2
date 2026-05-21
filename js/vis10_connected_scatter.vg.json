@@ -8,7 +8,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/income_spending.csv"
+    "url": "data/income_spending.csv"
   },
   "layer": [
     {
