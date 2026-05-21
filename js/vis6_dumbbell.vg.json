@@ -8,7 +8,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/home_takeaway.csv"
+    "url": "data/home_takeaway.csv"
   },
   "layer": [
     {
