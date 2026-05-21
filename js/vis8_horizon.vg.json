@@ -8,7 +8,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/state_consumption_trends.csv"
+    "url": "data/state_consumption_trends.csv"
   },
   "facet": {
     "field": "state",
