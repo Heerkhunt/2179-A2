@@ -8,7 +8,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/coffee_type_age.csv"
+    "url": "data/coffee_type_age.csv"
   },
   "facet": {
     "field": "coffee_type",
