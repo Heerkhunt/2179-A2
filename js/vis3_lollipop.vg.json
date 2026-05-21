@@ -10,8 +10,8 @@
     "subtitleFontSize": 12
   },
   "data": {
-    "url": "data/state_cafe_density.csv"
-  },
+  "url": "data/state_cafe_density.csv"
+}
   "transform": [
     {
       "calculate": "datum.cafes_per_100k",
