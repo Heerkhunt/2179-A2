@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 620,
-  "height": 60,
+  "width": 430,
+"height": 300,
   "title": {
     "text": "State Coffee Trend Bands",
     "subtitle": "Compact horizon-style bands compare state consumption trends over time.",
