@@ -27,7 +27,7 @@
     },
     {
       "data": {
-        "url": "../data/flow_map.csv"
+        "url": "data/flow_map.csv"
       },
       "projection": {
         "type": "mercator"
