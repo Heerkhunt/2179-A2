@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 620,
-  "height": 300,
+  "width": 430,
+"height": 300,
   "title": {
     "text": "Where Coffee Money Goes",
     "subtitle": "Pre-computed treemap blocks show spending share across coffee categories.",
