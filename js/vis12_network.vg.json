@@ -3,7 +3,6 @@
   "autosize": {"type": "fit", "contains": "padding"},
   "width": 430,
 "height": 300,
-  "padding": 40
   "title": {
     "text": "How Coffee Habits Connect",
     "subtitle": "A designed network links age, frequency, type, takeaway and spending behaviours.",
