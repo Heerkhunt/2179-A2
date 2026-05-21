@@ -234,3 +234,10 @@ h3 {
 .vega-embed svg {
   overflow: visible !important;
 }
+
+.note{
+  margin:10px 0 0;
+  font-size:13px;
+  color:#6b4c38;
+  font-weight:600;
+}
