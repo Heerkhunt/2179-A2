@@ -8,7 +8,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/state_cafe_density.csv"
+    "url": "data/state_cafe_density.csv"
   },
   "transform": [
     {
