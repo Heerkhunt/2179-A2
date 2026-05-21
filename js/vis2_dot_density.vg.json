@@ -13,7 +13,7 @@
   "layer": [
     {
       "data": {
-        "url": "../data/australia_states_simplified.geojson",
+        "url": "data/australia_states_simplified.geojson",
         "format": {
           "type": "json",
           "property": "features"
@@ -30,7 +30,7 @@
     },
     {
       "data": {
-        "url": "../data/australian_cafe_locations.csv"
+        "url": "data/australian_cafe_locations.csv"
       },
       "transform": [
         {
