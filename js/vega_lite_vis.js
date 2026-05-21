@@ -13,4 +13,10 @@ const charts = [
   ["#vis12", "js/vis12_network.vg.json"],
   ["#vis13", "js/vis13_custom_combo.vg.json"]
 ];
-charts.forEach(([id, spec]) => vegaEmbed(id, spec, {actions:false}).catch(console.error));
+
+charts.forEach(([id, spec]) =>
+  vegaEmbed(id, spec, {
+    actions: false,
+    renderer: "svg"
+  }).catch(console.error)
+);
