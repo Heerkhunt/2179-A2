@@ -100,44 +100,55 @@ h3 {
 
 .card,
 .callout {
-  border: 1px solid #efdcc8;
-  border-radius: 22px;
-  padding: 18px;
-  box-shadow: 0 10px 30px rgba(71, 43, 20, 0.08);
-  min-width: 0;
+  border:1px solid #efdcc8;
+  border-radius:22px;
+  padding:18px;
+  box-shadow:0 10px 30px rgba(71,43,20,.08);
+  min-width:0;
 }
 
-.card {
-  background: #fffdf9;
-  overflow: hidden;
-  min-height: 360px;
+.card{
+  background:#fffdf9;
+  overflow:visible;   /* changed from hidden */
+  min-height:420px;   /* increased */
 }
 
-.callout {
-  background: #3b2415;
-  color: #fff;
-  min-height: 210px;
+.callout{
+  background:#3b2415;
+  color:#fff;
+  min-height:210px;
 }
 
-.callout p {
-  color: #f6dabe;
+.callout p{
+  color:#f6dabe;
 }
 
-.wide {
-  grid-column: 1 / -1;
-  min-height: 430px;
+.wide{
+  grid-column:1/-1;
+  min-height:460px;
 }
 
-/* Vega chart fitting fixes */
-.vega-embed {
-  width: 100%;
-  max-width: 100%;
+/* Vega fitting fixes */
+
+.vega-embed{
+  width:100%;
+  max-width:100%;
 }
 
-.vega-embed svg {
-  max-width: 100%;
-  height: auto;
-  display: block;
+.vega-embed svg{
+  max-width:100%;
+  height:auto;
+  display:block;
+  overflow:visible !important;
+}
+
+#vis1,#vis2,#vis3,#vis4,#vis5,
+#vis7,#vis8,#vis9,#vis10,#vis11,#vis12{
+  min-height:320px;
+}
+
+#vis6,#vis13{
+  min-height:380px;
 }
 
 /* Prevent legends and labels from creating horizontal scroll */
