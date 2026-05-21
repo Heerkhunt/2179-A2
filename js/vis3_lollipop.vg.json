@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 430,
-  "height": 260,
+"height": 300,
   "title": {
     "text": "Cafés per 100k People by State",
     "subtitle": "Lollipop ranking highlights café access after population normalisation.",
