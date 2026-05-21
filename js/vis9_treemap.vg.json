@@ -55,17 +55,18 @@
       }
     },
     {
-      "mark": {
-        "type": "text",
-        "fontWeight": "bold",
-        "fontSize": 14,
-        "color": "#3B2415"
-      },
-      "encoding": {
-        "x": {
-          "field": "x",
-          "type": "quantitative"
-        },
+  "mark": {
+    "type":"text",
+    "fontSize":12,
+    "fontWeight":"bold",
+    "limit":90,
+    "ellipsis":"…",
+    "color":"#2b1a12"
+  },
+  "encoding": {
+    "text": {"field":"category"}
+  }
+},
         "y": {
           "field": "y",
           "type": "quantitative"
