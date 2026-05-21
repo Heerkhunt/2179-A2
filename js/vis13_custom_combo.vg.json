@@ -1,5 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "autosize": {"type": "fit", "contains": "padding"},
   "title": {
     "text": "Final Coffee Culture Scorecard",
     "subtitle": "A combined index blends caf\u00e9 density, spending and brand presence into one state profile.",
