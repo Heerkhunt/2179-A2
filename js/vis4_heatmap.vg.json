@@ -8,7 +8,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/coffee_frequency_age.csv"
+    "url": "data/coffee_frequency_age.csv"
   },
   "mark": {
     "type": "rect",
