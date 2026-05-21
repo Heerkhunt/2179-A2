@@ -1,43 +1,40 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {"type": "fit", "contains": "padding"},
+  "width": 430,
+  "height": 300,
+
   "title": {
     "text": "State Coffee Trend Bands",
-    "subtitle": "Small horizon-style bands compare state consumption trends over time.",
-    "anchor": "start",
-    "font": "Inter",
-    "fontSize": 15,
-    "subtitleFont": "Inter",
-    "subtitleFontSize": 12
+    "subtitle": "Compact horizon-style bands compare state consumption trends over time.",
+    "anchor": "start"
   },
+
   "data": {
     "url": "data/state_consumption_trends.csv"
   },
+
   "facet": {
     "field": "state",
     "type": "nominal",
-    "columns": 4,
-    "title": null,
-    "header": {
-      "labelFont": "Inter",
-      "labelFontSize": 11,
-      "labelColor": "#3B2415"
-    }
+    "columns": 1,
+    "title": null
   },
-  "spacing": 14,
+
   "spec": {
-    "width": 95,
-    "height": 55,
+    "width": 350,
+    "height": 38,
+
     "mark": {
       "type": "area",
       "interpolate": "monotone",
       "line": {
-        "color": "#5b2f16",
-        "strokeWidth": 1.2
+        "color": "#5b2f16"
       },
       "color": "#d88942",
       "opacity": 0.75
     },
+
     "encoding": {
       "x": {
         "field": "year",
@@ -45,37 +42,43 @@
         "title": null,
         "axis": {
           "labelAngle": 0,
-          "labelFontSize": 8,
-          "labelOverlap": true,
-          "tickSize": 2
+          "labelFontSize": 9
         }
       },
+
       "y": {
         "field": "consumption_index",
         "type": "quantitative",
         "title": null,
         "axis": null
       },
+
       "tooltip": [
-        {"field": "state", "title": "State"},
-        {"field": "year", "title": "Year"},
-        {"field": "consumption_index", "title": "Consumption index"}
+        {"field":"state"},
+        {"field":"year"},
+        {"field":"consumption_index"}
       ]
     }
   },
-  "resolve": {
-    "scale": {
-      "y": "independent"
-    }
-  },
+
   "config": {
-    "background": "#FFF9F2",
-    "view": {"stroke": null},
-    "font": "Inter",
-    "axis": {
-      "labelColor": "#5C4737",
-      "titleColor": "#3B2415",
-      "gridColor": "#ead9c7"
+    "background":"#FFF9F2",
+
+    "view":{
+      "stroke":null
+    },
+
+    "font":"Inter, Arial",
+
+    "axis":{
+      "labelColor":"#5C4737",
+      "titleColor":"#3B2415",
+      "gridColor":"#ead9c7"
+    },
+
+    "legend":{
+      "labelColor":"#5C4737",
+      "titleColor":"#3B2415"
     }
   }
 }
