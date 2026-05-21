@@ -17,6 +17,23 @@ const charts = [
 charts.forEach(([id, spec]) =>
   vegaEmbed(id, spec, {
     actions: false,
-    renderer: "svg"
+    renderer: "svg",
+    config: {
+      font: "Inter",
+      legend: {
+        labelFont: "Inter",
+        titleFont: "Inter",
+        labelFontSize: 11,
+        titleFontSize: 12
+      },
+      axis: {
+        labelFont: "Inter",
+        titleFont: "Inter"
+      },
+      title: {
+        font: "Inter",
+        subtitleFont: "Inter"
+      }
+    }
   }).catch(console.error)
 );
