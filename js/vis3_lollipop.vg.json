@@ -1,32 +1,29 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 620,
-  "height": 290,
+  "width": 430,
+  "height": 260,
   "title": {
-    "text": "Caf\u00e9 Availability Ranking",
-    "subtitle": "Lollipop ranking of caf\u00e9s per 100,000 people.",
-    "anchor": "start"
+    "text": "Cafés per 100k People by State",
+    "subtitle": "Lollipop ranking highlights café access after population normalisation.",
+    "anchor": "start",
+    "fontSize": 15,
+    "subtitleFontSize": 12
   },
   "data": {
     "url": "data/state_cafe_density.csv"
   },
   "transform": [
     {
-      "window": [
-        {
-          "op": "mean",
-          "field": "cafes_per_100k",
-          "as": "avg"
-        }
-      ]
+      "calculate": "datum.cafes_per_100k",
+      "as": "Cafe density"
     }
   ],
   "layer": [
     {
       "mark": {
         "type": "rule",
-        "strokeWidth": 3,
-        "color": "#caa77f"
+        "stroke": "#D8B48A",
+        "strokeWidth": 3
       },
       "encoding": {
         "y": {
@@ -39,8 +36,7 @@
           "value": 0
         },
         "x2": {
-          "field": "cafes_per_100k",
-          "type": "quantitative"
+          "field": "Cafe density"
         }
       }
     },
@@ -48,7 +44,60 @@
       "mark": {
         "type": "circle",
         "size": 180,
-        "color": "#7b4b2a"
+        "color": "#A85C2A",
+        "stroke": "#3B2418",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "Cafe density",
+          "type": "quantitative",
+          "title": "Cafés per 100k people",
+          "scale": {
+            "domain": [0, 50]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state_full",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "cafe_count",
+            "type": "quantitative",
+            "title": "Café count",
+            "format": ","
+          },
+          {
+            "field": "population",
+            "type": "quantitative",
+            "title": "Population",
+            "format": ","
+          },
+          {
+            "field": "Cafe density",
+            "type": "quantitative",
+            "title": "Cafés per 100k",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 8,
+        "fontSize": 11,
+        "fontWeight": "bold",
+        "color": "#3B2418"
       },
       "encoding": {
         "y": {
@@ -57,52 +106,26 @@
           "sort": "-x"
         },
         "x": {
-          "field": "cafes_per_100k",
-          "type": "quantitative",
-          "title": "Caf\u00e9s per 100k people"
-        },
-        "tooltip": [
-          {
-            "field": "state_full"
-          },
-          {
-            "field": "cafes_per_100k",
-            "format": ".2f"
-          }
-        ]
-      }
-    },
-    {
-      "mark": {
-        "type": "rule",
-        "strokeDash": [
-          5,
-          5
-        ],
-        "color": "#555"
-      },
-      "encoding": {
-        "x": {
-          "field": "avg",
+          "field": "Cafe density",
           "type": "quantitative"
+        },
+        "text": {
+          "field": "Cafe density",
+          "type": "quantitative",
+          "format": ".1f"
         }
       }
     }
   ],
   "config": {
-    "background": "#FFF9F2",
+    "background": "#FFFDF8",
     "view": {
       "stroke": null
     },
-    "font": "Inter, Arial",
     "axis": {
-      "labelColor": "#5C4737",
-      "titleColor": "#3B2415",
-      "gridColor": "#ead9c7"
-    },
-    "legend": {
-      "labelColor": "#5C4737",
-      "titleColor": "#3B2415"
+      "grid": false,
+      "labelFontSize": 11,
+      "titleFontSize": 12
     }
   }
 }
