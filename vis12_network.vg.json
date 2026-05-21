@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 330,
+  "title": {
+    "text": "How Coffee Habits Connect",
+    "subtitle": "A designed network links age, frequency, type, takeaway and spending behaviours.",
+    "anchor": "start"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "../data/network_links.csv"
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#b98655",
+        "opacity": 0.7
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": null
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y2": {
+          "field": "y2"
+        },
+        "size": {
+          "field": "weight",
+          "type": "quantitative",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "source"
+          },
+          {
+            "field": "target"
+          },
+          {
+            "field": "weight"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "../data/network_nodes.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "size": 1300,
+        "color": "#7b4b2a",
+        "opacity": 0.9
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": null
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": null
+        },
+        "tooltip": [
+          {
+            "field": "node"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "../data/network_nodes.csv"
+      },
+      "mark": {
+        "type": "text",
+        "color": "white",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "node"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

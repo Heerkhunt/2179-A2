@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 300,
+  "title": {
+    "text": "Where Coffee Money Goes",
+    "subtitle": "Pre-computed treemap blocks show spending share across coffee categories.",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "../data/spending_treemap.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "#fff",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative",
+          "axis": null
+        },
+        "x2": {
+          "field": "x2"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative",
+          "axis": null
+        },
+        "y2": {
+          "field": "y2"
+        },
+        "color": {
+          "field": "share",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "oranges"
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "item"
+          },
+          {
+            "field": "share",
+            "title": "Share (%)"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontWeight": "bold",
+        "fontSize": 14,
+        "color": "#3B2415"
+      },
+      "encoding": {
+        "x": {
+          "field": "x",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "y",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "item"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

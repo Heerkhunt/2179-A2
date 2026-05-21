@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 290,
+  "title": {
+    "text": "Caf\u00e9 Availability Ranking",
+    "subtitle": "Lollipop ranking of caf\u00e9s per 100,000 people.",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "../data/state_cafe_density.csv"
+  },
+  "transform": [
+    {
+      "window": [
+        {
+          "op": "mean",
+          "field": "cafes_per_100k",
+          "as": "avg"
+        }
+      ]
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#caa77f"
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "value": 0
+        },
+        "x2": {
+          "field": "cafes_per_100k",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 180,
+        "color": "#7b4b2a"
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": "-x"
+        },
+        "x": {
+          "field": "cafes_per_100k",
+          "type": "quantitative",
+          "title": "Caf\u00e9s per 100k people"
+        },
+        "tooltip": [
+          {
+            "field": "state_full"
+          },
+          {
+            "field": "cafes_per_100k",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "strokeDash": [
+          5,
+          5
+        ],
+        "color": "#555"
+      },
+      "encoding": {
+        "x": {
+          "field": "avg",
+          "type": "quantitative"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

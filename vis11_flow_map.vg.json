@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 420,
+  "title": {
+    "text": "Regional Pull Toward Caf\u00e9 Hubs",
+    "subtitle": "Connection lines summarise state-to-capital caf\u00e9 concentration flows.",
+    "anchor": "start"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "../data/australia_states_simplified.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f2e1cb",
+        "stroke": "#fff"
+      }
+    },
+    {
+      "data": {
+        "url": "../data/flow_map.csv"
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "rule",
+        "color": "#7b4b2a",
+        "opacity": 0.55
+      },
+      "encoding": {
+        "longitude": {
+          "field": "from_lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "from_lat",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "to_lon"
+        },
+        "latitude2": {
+          "field": "to_lat"
+        },
+        "size": {
+          "field": "flow",
+          "type": "quantitative",
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "state"
+          },
+          {
+            "field": "hub"
+          },
+          {
+            "field": "flow"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

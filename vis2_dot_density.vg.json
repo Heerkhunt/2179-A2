@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 420,
+  "title": {
+    "text": "Where Australia\u2019s Caf\u00e9s Cluster",
+    "subtitle": [
+      "Each dot is one caf\u00e9 record from the compiled locations dataset.",
+      "The concentration forms an east-coast urban corridor."
+    ],
+    "anchor": "start"
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "../data/australia_states_simplified.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f2e1cb",
+        "stroke": "#ffffff"
+      }
+    },
+    {
+      "data": {
+        "url": "../data/australian_cafe_locations.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.lat < -8 && datum.lat > -45 && datum.lon > 110 && datum.lon < 155"
+        }
+      ],
+      "projection": {
+        "type": "mercator"
+      },
+      "mark": {
+        "type": "circle",
+        "size": 10,
+        "opacity": 0.18,
+        "color": "#6f3e1e"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "name",
+            "title": "Caf\u00e9"
+          },
+          {
+            "field": "city",
+            "title": "City"
+          },
+          {
+            "field": "state",
+            "title": "State"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 300,
+  "title": {
+    "text": "Home-made or Takeaway Coffee?",
+    "subtitle": "Dumbbells show the gap between home and caf\u00e9/takeaway habits.",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "../data/home_takeaway.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rule",
+        "strokeWidth": 3,
+        "color": "#d7b58f"
+      },
+      "encoding": {
+        "y": {
+          "field": "age_group",
+          "type": "nominal",
+          "title": null
+        },
+        "x": {
+          "aggregate": "min",
+          "field": "percentage",
+          "type": "quantitative",
+          "title": "Share (%)"
+        },
+        "x2": {
+          "aggregate": "max",
+          "field": "percentage"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "circle",
+        "size": 150
+      },
+      "encoding": {
+        "y": {
+          "field": "age_group",
+          "type": "nominal"
+        },
+        "x": {
+          "field": "percentage",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "mode",
+          "type": "nominal",
+          "scale": {
+            "range": [
+              "#5b2f16",
+              "#d88942"
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "age_group"
+          },
+          {
+            "field": "mode"
+          },
+          {
+            "field": "percentage"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

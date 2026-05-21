@@ -1,0 +1,73 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 60,
+  "title": {
+    "text": "State Coffee Trend Bands",
+    "subtitle": "Compact horizon-style bands compare state consumption trends over time.",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "../data/state_consumption_trends.csv"
+  },
+  "facet": {
+    "field": "state",
+    "type": "nominal",
+    "columns": 1,
+    "title": null
+  },
+  "spec": {
+    "mark": {
+      "type": "area",
+      "interpolate": "monotone",
+      "line": {
+        "color": "#5b2f16"
+      },
+      "color": "#d88942",
+      "opacity": 0.75
+    },
+    "encoding": {
+      "x": {
+        "field": "year",
+        "type": "ordinal",
+        "title": null,
+        "axis": {
+          "labelAngle": 0
+        }
+      },
+      "y": {
+        "field": "consumption_index",
+        "type": "quantitative",
+        "title": null,
+        "axis": null
+      },
+      "tooltip": [
+        {
+          "field": "state"
+        },
+        {
+          "field": "year"
+        },
+        {
+          "field": "consumption_index"
+        }
+      ]
+    }
+  },
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

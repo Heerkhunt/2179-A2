@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Final Coffee Culture Scorecard",
+    "subtitle": "A combined index blends caf\u00e9 density, spending and brand presence into one state profile.",
+    "anchor": "start"
+  },
+  "hconcat": [
+    {
+      "width": 300,
+      "height": 260,
+      "data": {
+        "url": "../data/state_culture_score.csv"
+      },
+      "mark": {
+        "type": "bar",
+        "cornerRadiusEnd": 5
+      },
+      "encoding": {
+        "y": {
+          "field": "state",
+          "type": "nominal",
+          "sort": "-x",
+          "title": null
+        },
+        "x": {
+          "field": "culture_score",
+          "type": "quantitative",
+          "title": "Culture score"
+        },
+        "color": {
+          "field": "culture_score",
+          "type": "quantitative",
+          "scale": {
+            "scheme": "yelloworangered"
+          },
+          "legend": null
+        },
+        "tooltip": [
+          {
+            "field": "state_full"
+          },
+          {
+            "field": "culture_score"
+          }
+        ]
+      }
+    },
+    {
+      "width": 260,
+      "height": 260,
+      "data": {
+        "url": "../data/state_culture_score.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "filled": true,
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {
+          "field": "cafe_density",
+          "type": "quantitative",
+          "title": "Caf\u00e9 density"
+        },
+        "y": {
+          "field": "spending_score",
+          "type": "quantitative",
+          "title": "Spending score"
+        },
+        "size": {
+          "field": "brand_presence",
+          "type": "quantitative",
+          "title": "Brand presence"
+        },
+        "color": {
+          "field": "state",
+          "type": "nominal",
+          "scale": {
+            "scheme": "tableau20"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "state_full"
+          },
+          {
+            "field": "cafe_density"
+          },
+          {
+            "field": "spending_score"
+          },
+          {
+            "field": "brand_presence"
+          }
+        ]
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

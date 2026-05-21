@@ -1,0 +1,89 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 330,
+  "title": {
+    "text": "Income and Caf\u00e9 Spending Move Together",
+    "subtitle": "Connected scatterplot shows year-by-year movement rather than a static correlation.",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "../data/income_spending.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "line",
+        "point": {
+          "filled": true,
+          "size": 80
+        },
+        "strokeWidth": 3,
+        "color": "#7b4b2a"
+      },
+      "encoding": {
+        "x": {
+          "field": "income_index",
+          "type": "quantitative",
+          "title": "Income index"
+        },
+        "y": {
+          "field": "cafe_spending_index",
+          "type": "quantitative",
+          "title": "Caf\u00e9 spending index"
+        },
+        "order": {
+          "field": "year"
+        },
+        "tooltip": [
+          {
+            "field": "year"
+          },
+          {
+            "field": "income_index"
+          },
+          {
+            "field": "cafe_spending_index"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "dx": 8,
+        "dy": -8,
+        "fontSize": 10
+      },
+      "encoding": {
+        "x": {
+          "field": "income_index",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "cafe_spending_index",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "year"
+        }
+      }
+    }
+  ],
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

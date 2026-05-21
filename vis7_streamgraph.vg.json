@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": 320,
+  "title": {
+    "text": "How Coffee Spending Has Evolved",
+    "subtitle": "Streamgraph shows the mix of coffee-related spending categories over time.",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "../data/coffee_spending_categories.csv"
+  },
+  "mark": {
+    "type": "area",
+    "interpolate": "monotone"
+  },
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "ordinal",
+      "title": null
+    },
+    "y": {
+      "field": "spending_millions",
+      "type": "quantitative",
+      "stack": "center",
+      "title": "Spending mix"
+    },
+    "color": {
+      "field": "category",
+      "type": "nominal",
+      "scale": {
+        "scheme": "yelloworangered"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "year"
+      },
+      {
+        "field": "category"
+      },
+      {
+        "field": "spending_millions",
+        "title": "$m"
+      }
+    ]
+  },
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}

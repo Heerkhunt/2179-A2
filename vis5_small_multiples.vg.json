@@ -1,0 +1,74 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 170,
+  "height": 130,
+  "title": {
+    "text": "Preferred Coffee Types Across Age Groups",
+    "subtitle": "Small multiples make age patterns easier to compare.",
+    "anchor": "start"
+  },
+  "data": {
+    "url": "../data/coffee_type_age.csv"
+  },
+  "facet": {
+    "field": "coffee_type",
+    "type": "nominal",
+    "columns": 3,
+    "title": null
+  },
+  "spec": {
+    "mark": {
+      "type": "line",
+      "point": {
+        "size": 55
+      },
+      "strokeWidth": 2,
+      "color": "#7b4b2a"
+    },
+    "encoding": {
+      "x": {
+        "field": "age_group",
+        "type": "ordinal",
+        "title": null
+      },
+      "y": {
+        "field": "percentage",
+        "type": "quantitative",
+        "title": "%",
+        "scale": {
+          "domain": [
+            0,
+            40
+          ]
+        }
+      },
+      "tooltip": [
+        {
+          "field": "coffee_type"
+        },
+        {
+          "field": "age_group"
+        },
+        {
+          "field": "percentage"
+        }
+      ]
+    }
+  },
+  "config": {
+    "background": "#FFF9F2",
+    "view": {
+      "stroke": null
+    },
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
+    },
+    "legend": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
+    }
+  }
+}
