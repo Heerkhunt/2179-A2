@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Australia Runs on Coffee</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Fraunces:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <header class="hero">
+    <p class="eyebrow">FIT2179 Data Visualisation 2</p>
+    <h1>Australia Runs on Coffee</h1>
+    <p class="subtitle">Exploring how café access, coffee habits, spending, and brand presence shape Australia’s café culture.</p>
+    <div class="kpis"><div><b>12,727</b><span> café locations processed</span></div><div><b>13</b><span> linked visual idioms</span></div><div><b>5</b><span> data themes combined</span></div></div>
+  </header>
+  <main>
+    <section class="section"><h2>1. Australia’s café landscape</h2><p>Raw café counts mostly reveal population size. The first three views normalise, locate, and rank café access to show availability more fairly.</p><div class="grid two"><div class="card"><div id="vis1"></div></div><div class="callout"><h3>Key takeaway</h3><p>ACT and Tasmania rise once café counts are compared with population. This changes the story from “where are the most cafés?” to “where is café access strongest?”</p></div><div class="card"><div id="vis2"></div></div><div class="card"><div id="vis3"></div></div></div></section>
+    <section class="section"><h2>2. Who drinks coffee?</h2><p>Coffee culture is behavioural as well as geographic. Age affects frequency, preferred drink type, and whether coffee is made at home or bought outside.</p><div class="grid two"><div class="card"><div id="vis4"></div></div><div class="card"><div id="vis5"></div></div><div class="card wide"><div id="vis6"></div></div></div></section>
+    <section class="section"><h2>3. Spending and trends</h2><p>Spending views show how cafés, takeaway formats, pods and home coffee sit within the wider coffee economy.</p><div class="grid two"><div class="card"><div id="vis7"></div></div><div class="card"><div id="vis8"></div></div><div class="card"><div id="vis9"></div></div></div></section>
+    <section class="section"><h2>4. Relationships</h2><p>The next charts show movement and relationships rather than isolated totals.</p><div class="grid two"><div class="card"><div id="vis10"></div></div><div class="card"><div id="vis11"></div></div><div class="card"><div id="vis12"></div></div></div></section>
+    <section class="section final"><h2>5. Final insight</h2><p>The combined scorecard summarises the wider café culture pattern by blending density, spending, and brand presence.</p><div class="card"><div id="vis13"></div></div></section>
+    <section class="metadata"><h2>Sources and acknowledgement</h2><p>Datasets compiled from OpenStreetMap café locations, ABS National/State/Territory Population, ABS Monthly Household Spending Indicator, Roy Morgan public coffee consumption findings, Canstar Blue coffee shop ratings, and coffee brand/franchise store information. Some intermediate tables are cleaned and derived from these sources for visualisation. Generative AI was used to support layout, text editing, and Vega-Lite code drafting.</p><p>Author: Heer Khunt · Date: May 2026</p></section>
+  </main>
+  <script src="js/vega_lite_vis.js"></script>
+</body>
+</html>
