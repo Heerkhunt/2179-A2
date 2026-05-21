@@ -10,7 +10,7 @@
       "width": 300,
       "height": 260,
       "data": {
-        "url": "../data/state_culture_score.csv"
+        "url": "data/state_culture_score.csv"
       },
       "mark": {
         "type": "bar",
@@ -50,7 +50,7 @@
       "width": 260,
       "height": 260,
       "data": {
-        "url": "../data/state_culture_score.csv"
+        "url": "data/state_culture_score.csv"
       },
       "mark": {
         "type": "circle",
