@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 620,
-  "height": 330,
+  "width": 430,
+"height": 300,
   "title": {
     "text": "Income and Caf\u00e9 Spending Move Together",
     "subtitle": "Connected scatterplot shows year-by-year movement rather than a static correlation.",
