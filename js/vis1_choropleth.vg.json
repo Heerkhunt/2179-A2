@@ -11,7 +11,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/australia_states_simplified.geojson",
+    "url": "data/australia_states_simplified.geojson",
     "format": {
       "type": "json",
       "property": "features"
@@ -22,7 +22,7 @@
       "lookup": "properties.STATE_NAME",
       "from": {
         "data": {
-          "url": "../data/state_cafe_density.csv"
+          "url": "data/state_cafe_density.csv"
         },
         "key": "state_full",
         "fields": [
