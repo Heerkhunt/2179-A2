@@ -14,9 +14,10 @@
  "data": {
   "url": "data/australia_states_simplified.geojson",
   "format": {
-    "type": "geojson"
+    "type": "json",
+    "property": "features"
   }
-}
+},
   "transform": [
     {
       "lookup": "properties.STATE_NAME",
