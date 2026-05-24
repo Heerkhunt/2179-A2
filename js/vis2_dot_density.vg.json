@@ -21,8 +21,11 @@
         }
       },
       "projection": {
-        "type": "mercator"
-      },
+  "type": "mercator",
+  "center": [134, -28],
+  "scale": 520,
+  "translate": [215, 155]
+}
       "mark": {
         "type": "geoshape",
         "fill": "#f2e1cb",
