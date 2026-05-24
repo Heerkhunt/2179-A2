@@ -9,7 +9,7 @@
     "anchor": "start"
   },
   "data": {
-    "url": "../data/spending_treemap.csv"
+    "url": "data/spending_treemap.csv"
   },
   "layer": [
     {
