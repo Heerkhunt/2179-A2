@@ -14,12 +14,13 @@
   },
   "layer": [
     {
-      "data": {
+   "data": {
   "url": "data/australia_states_simplified.geojson",
   "format": {
-    "type": "geojson"
+    "type": "json",
+    "property": "features"
   }
-}
+}.
       "projection": {
         "type": "mercator",
         "center": [134, -28],
