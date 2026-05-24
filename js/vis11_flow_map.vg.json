@@ -20,7 +20,7 @@
     "type": "json",
     "property": "features"
   }
-}.
+},
       "projection": {
         "type": "mercator",
         "center": [134, -28],
