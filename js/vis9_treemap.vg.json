@@ -5,7 +5,7 @@
   "height": 300,
   "title": {
     "text": "Where Coffee Money Goes",
-    "subtitle": "Pre-computed treemap blocks show spending share across coffee categories.",
+    "subtitle": "Treemap shows spending share across coffee categories.",
     "anchor": "start"
   },
   "data": {
