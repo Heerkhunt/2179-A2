@@ -1,0 +1,13 @@
+route,order,longitude,latitude,flow
+Regional WA to Perth,1,121.5,-30.5,32
+Regional WA to Perth,2,115.86,-31.95,32
+Regional SA to Adelaide,1,135.5,-32.5,24
+Regional SA to Adelaide,2,138.60,-34.93,24
+Regional VIC to Melbourne,1,143.0,-36.8,36
+Regional VIC to Melbourne,2,144.96,-37.81,36
+Regional NSW to Sydney,1,148.5,-32.8,46
+Regional NSW to Sydney,2,151.21,-33.87,46
+Regional QLD to Brisbane,1,146.5,-22.5,38
+Regional QLD to Brisbane,2,153.03,-27.47,38
+Regional TAS to Hobart,1,146.0,-41.5,18
+Regional TAS to Hobart,2,147.33,-42.88,18
