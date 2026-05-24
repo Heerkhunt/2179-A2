@@ -11,13 +11,12 @@
     ],
     "anchor": "start"
   },
-  "data": {
-    "url": "data/australia_states_simplified.geojson",
-    "format": {
-      "type": "json",
-      "property": "features"
-    }
-  },
+ "data": {
+  "url": "data/australia_states_simplified.geojson",
+  "format": {
+    "type": "geojson"
+  }
+}
   "transform": [
     {
       "lookup": "properties.STATE_NAME",
