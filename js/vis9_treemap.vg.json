@@ -1,7 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "autosize": {"type": "fit", "contains": "padding"},
-  "width": 430,
+  "width": 620,
   "height": 300,
   "title": {
     "text": "Where Coffee Money Goes",
