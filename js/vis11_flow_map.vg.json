@@ -15,12 +15,11 @@
   "layer": [
     {
       "data": {
-        "url": "data/australian_states.topojson",
-        "format": {
-          "type": "topojson",
-          "feature": "collection"
-        }
-      },
+  "url": "data/australia_states_simplified.geojson",
+  "format": {
+    "type": "geojson"
+  }
+}
       "projection": {
         "type": "mercator",
         "center": [134, -28],
