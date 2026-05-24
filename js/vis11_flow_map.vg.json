@@ -2,93 +2,127 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {"type": "fit", "contains": "padding"},
   "width": 430,
-"height": 300,
+  "height": 300,
   "title": {
-    "text": "Regional Pull Toward Caf\u00e9 Hubs",
-    "subtitle": "Connection lines summarise state-to-capital caf\u00e9 concentration flows.",
-    "anchor": "start"
+    "text": "Regional Pull Toward Café Hubs",
+    "subtitle": "Connection lines show movement from regional areas toward major café centres.",
+    "anchor": "start",
+    "font": "Inter",
+    "fontSize": 15,
+    "subtitleFont": "Inter",
+    "subtitleFontSize": 12
   },
   "layer": [
     {
       "data": {
-        "url": "data/australia_states_simplified.geojson",
+        "url": "data/australian_states.topojson",
         "format": {
-          "type": "json",
-          "property": "features"
+          "type": "topojson",
+          "feature": "collection"
         }
       },
       "projection": {
-  "type": "mercator",
-  "center": [134, -28],
-  "scale": 520,
-  "translate": [215, 155]
-}
+        "type": "mercator",
+        "center": [134, -28],
+        "scale": 520,
+        "translate": [215, 155]
+      },
       "mark": {
         "type": "geoshape",
-        "fill": "#f2e1cb",
-        "stroke": "#fff"
+        "fill": "#ead9c2",
+        "stroke": "#ffffff",
+        "strokeWidth": 1
       }
     },
     {
       "data": {
-        "url": "data/flow_map.csv"
+        "url": "data/cafe_flow_lines.csv"
       },
       "projection": {
-        "type": "mercator"
+        "type": "mercator",
+        "center": [134, -28],
+        "scale": 520,
+        "translate": [215, 155]
       },
       "mark": {
-        "type": "rule",
-        "color": "#7b4b2a",
-        "opacity": 0.55
+        "type": "line",
+        "color": "#8a5a3b",
+        "opacity": 0.75
       },
       "encoding": {
         "longitude": {
-          "field": "from_lon",
+          "field": "longitude",
           "type": "quantitative"
         },
         "latitude": {
-          "field": "from_lat",
+          "field": "latitude",
           "type": "quantitative"
         },
-        "longitude2": {
-          "field": "to_lon"
+        "detail": {
+          "field": "route",
+          "type": "nominal"
         },
-        "latitude2": {
-          "field": "to_lat"
+        "order": {
+          "field": "order",
+          "type": "quantitative"
         },
-        "size": {
+        "strokeWidth": {
           "field": "flow",
           "type": "quantitative",
-          "legend": null
+          "title": "Relative flow",
+          "scale": {
+            "range": [1.5, 6]
+          },
+          "legend": {
+            "orient": "right",
+            "title": "Flow strength"
+          }
         },
         "tooltip": [
-          {
-            "field": "state"
-          },
-          {
-            "field": "hub"
-          },
-          {
-            "field": "flow"
-          }
+          {"field": "route", "title": "Flow route"},
+          {"field": "flow", "title": "Relative flow"}
         ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {"city": "Perth", "longitude": 115.86, "latitude": -31.95},
+          {"city": "Adelaide", "longitude": 138.60, "latitude": -34.93},
+          {"city": "Melbourne", "longitude": 144.96, "latitude": -37.81},
+          {"city": "Sydney", "longitude": 151.21, "latitude": -33.87},
+          {"city": "Brisbane", "longitude": 153.03, "latitude": -27.47},
+          {"city": "Hobart", "longitude": 147.33, "latitude": -42.88}
+        ]
+      },
+      "projection": {
+        "type": "mercator",
+        "center": [134, -28],
+        "scale": 520,
+        "translate": [215, 155]
+      },
+      "mark": {
+        "type": "circle",
+        "size": 42,
+        "color": "#3b2415",
+        "opacity": 0.9
+      },
+      "encoding": {
+        "longitude": {"field": "longitude", "type": "quantitative"},
+        "latitude": {"field": "latitude", "type": "quantitative"},
+        "tooltip": [{"field": "city", "title": "Café hub"}]
       }
     }
   ],
   "config": {
     "background": "#FFF9F2",
-    "view": {
-      "stroke": null
-    },
-    "font": "Inter, Arial",
-    "axis": {
-      "labelColor": "#5C4737",
-      "titleColor": "#3B2415",
-      "gridColor": "#ead9c7"
-    },
+    "view": {"stroke": null},
+    "font": "Inter",
     "legend": {
-      "labelColor": "#5C4737",
-      "titleColor": "#3B2415"
+      "labelFont": "Inter",
+      "titleFont": "Inter",
+      "labelFontSize": 11,
+      "titleFontSize": 12
     }
   }
 }
