@@ -24,7 +24,7 @@
       "projection": {
         "type": "mercator",
         "center": [134, -28],
-        "scale": 470,
+        "scale": 390,
         "translate": [215, 155]
       },
       "mark": {
@@ -41,7 +41,7 @@
       "projection": {
         "type": "mercator",
         "center": [134, -28],
-        "scale": 470,
+        "scale": 390,
         "translate": [215, 155]
       },
       "mark": {
@@ -98,7 +98,7 @@
       "projection": {
         "type": "mercator",
         "center": [134, -28],
-        "scale": 470,
+        "scale": 390,
         "translate": [215, 155]
       },
       "mark": {
