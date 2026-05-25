@@ -12,7 +12,7 @@
   },
   "data": {
   "url": "data/state_cafe_density.csv"
-}
+},
   "transform": [
     {
       "calculate": "datum.cafes_per_100k",
