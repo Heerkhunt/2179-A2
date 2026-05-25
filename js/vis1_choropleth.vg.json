@@ -38,7 +38,7 @@
   "projection": {
   "type": "mercator",
   "center": [134, -28],
-  "scale": 520,
+  "scale": 390,
   "translate": [215, 155]
 },
   "mark": {
