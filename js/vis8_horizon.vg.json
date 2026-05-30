@@ -1,40 +1,44 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {"type": "fit", "contains": "padding"},
-  "width": 430,
-  "height": 300,
-
   "title": {
     "text": "State Coffee Trend Bands",
-    "subtitle": "Compact horizon-style bands compare state consumption trends over time.",
-    "anchor": "start"
+    "subtitle": "Small multiples compare each state’s coffee consumption trend over time.",
+    "anchor": "start",
+    "font": "Inter, Arial",
+    "fontSize": 15,
+    "subtitleFont": "Inter, Arial",
+    "subtitleFontSize": 12
   },
-
   "data": {
     "url": "data/state_consumption_trends.csv"
   },
-
   "facet": {
     "field": "state",
     "type": "nominal",
-    "columns": 1,
-    "title": null
+    "columns": 4,
+    "title": null,
+    "header": {
+      "labelFont": "Inter, Arial",
+      "labelFontSize": 11,
+      "labelColor": "#3B2415",
+      "labelFontWeight": "bold"
+    }
   },
-
+  "spacing": 18,
   "spec": {
-    "width": 350,
-    "height": 38,
-
+    "width": 82,
+    "height": 70,
     "mark": {
       "type": "area",
       "interpolate": "monotone",
       "line": {
-        "color": "#5b2f16"
+        "color": "#5b2f16",
+        "strokeWidth": 1.3
       },
       "color": "#d88942",
       "opacity": 0.75
     },
-
     "encoding": {
       "x": {
         "field": "year",
@@ -42,43 +46,38 @@
         "title": null,
         "axis": {
           "labelAngle": 0,
-          "labelFontSize": 9
+          "labelFontSize": 7,
+          "labelOverlap": true,
+          "tickSize": 2
         }
       },
-
       "y": {
         "field": "consumption_index",
         "type": "quantitative",
         "title": null,
-        "axis": null
+        "axis": null,
+        "scale": {"zero": false}
       },
-
       "tooltip": [
-        {"field":"state"},
-        {"field":"year"},
-        {"field":"consumption_index"}
+        {"field": "state", "title": "State"},
+        {"field": "year", "title": "Year"},
+        {"field": "consumption_index", "title": "Consumption index"}
       ]
     }
   },
-
+  "resolve": {
+    "scale": {
+      "y": "independent"
+    }
+  },
   "config": {
-    "background":"#FFF9F2",
-
-    "view":{
-      "stroke":null
-    },
-
-    "font":"Inter, Arial",
-
-    "axis":{
-      "labelColor":"#5C4737",
-      "titleColor":"#3B2415",
-      "gridColor":"#ead9c7"
-    },
-
-    "legend":{
-      "labelColor":"#5C4737",
-      "titleColor":"#3B2415"
+    "background": "#FFF9F2",
+    "view": {"stroke": null},
+    "font": "Inter, Arial",
+    "axis": {
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415",
+      "gridColor": "#ead9c7"
     }
   }
 }
