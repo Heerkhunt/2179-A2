@@ -1,7 +1,7 @@
 const charts = [
   ["#vis1", "js/vis1_choropleth.vg.json"],
   ["#vis2", "js/vis2_dot_density.vg.json"],
-  ["#vis3", "js/vis3_lollipop.vg.json"],
+["#vis3", "js/vis3_lollipop.vg.json"],
   ["#vis4", "js/vis4_heatmap.vg.json"],
   ["#vis5", "js/vis5_small_multiples.vg.json"],
   ["#vis6", "js/vis6_dumbbell.vg.json"],
