@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {"type": "fit", "contains": "padding"},
-  "width": 430,
-"height": 300,
+"width": 850,
+"height": 340
   "title": {
     "text": "How Coffee Spending Has Evolved",
     "subtitle": "Streamgraph shows the mix of coffee-related spending categories over time.",
