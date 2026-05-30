@@ -22,11 +22,11 @@
   }
 },
       "projection": {
-        "type": "mercator",
-        "center": [134, -28],
-        "scale": 390,
-        "translate": [215, 155]
-      },
+  "type": "mercator",
+  "center": [134, -28],
+  "scale": 330,
+  "translate": [190, 150]
+},
       "mark": {
         "type": "geoshape",
         "fill": "#ead9c2",
@@ -39,11 +39,11 @@
         "url": "data/cafe_flow_lines.csv"
       },
       "projection": {
-        "type": "mercator",
-        "center": [134, -28],
-        "scale": 390,
-        "translate": [215, 155]
-      },
+  "type": "mercator",
+  "center": [134, -28],
+  "scale": 330,
+  "translate": [190, 150]
+},
       "mark": {
         "type": "line",
         "color": "#8a5a3b",
@@ -96,11 +96,11 @@
         ]
       },
       "projection": {
-        "type": "mercator",
-        "center": [134, -28],
-        "scale": 390,
-        "translate": [215, 155]
-      },
+  "type": "mercator",
+  "center": [134, -28],
+  "scale": 330,
+  "translate": [190, 150]
+},
       "mark": {
         "type": "circle",
         "size": 42,
