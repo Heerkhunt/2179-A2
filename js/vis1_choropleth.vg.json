@@ -38,8 +38,8 @@
   "projection": {
   "type": "mercator",
   "center": [134, -28],
-  "scale": 390,
-  "translate": [215, 155]
+  "scale": 330,
+  "translate": [190, 150]
 },
   "mark": {
     "type": "geoshape",
