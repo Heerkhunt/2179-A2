@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {"type": "fit", "contains": "padding"},
 "width": 430,
-"height": 280
+"height": 300
   "title": {
     "text": "Caf\u00e9s per 100,000 People by State",
     "subtitle": [
