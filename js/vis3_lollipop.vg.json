@@ -2,23 +2,19 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "autosize": {"type": "fit", "contains": "padding"},
   "width": 430,
-"height": 300,
+  "height": 300,
   "title": {
-    "text": "Cafés per 100k People by State",
-    "subtitle": "Lollipop ranking highlights café access after population normalisation.",
+    "text": "Which States Have the Strongest Café Access?",
+    "subtitle": "Cafés per 100,000 people, ranked by state.",
     "anchor": "start",
+    "font": "Inter, Arial",
     "fontSize": 15,
+    "subtitleFont": "Inter, Arial",
     "subtitleFontSize": 12
   },
   "data": {
-  "url": "data/state_cafe_density.csv"
-},
-  "transform": [
-    {
-      "calculate": "datum.cafes_per_100k",
-      "as": "Cafe density"
-    }
-  ],
+    "url": "data/state_cafe_density.csv"
+  },
   "layer": [
     {
       "mark": {
@@ -30,21 +26,29 @@
         "y": {
           "field": "state",
           "type": "nominal",
-          "sort": "-x",
-          "title": null
+          "sort": {
+            "field": "cafes_per_100k",
+            "order": "descending"
+          },
+          "title": null,
+          "axis": {
+            "labelFont": "Inter, Arial",
+            "labelFontSize": 12
+          }
         },
         "x": {
           "value": 0
         },
         "x2": {
-          "field": "Cafe density"
+          "field": "cafes_per_100k",
+          "type": "quantitative"
         }
       }
     },
     {
       "mark": {
         "type": "circle",
-        "size": 180,
+        "size": 190,
         "color": "#A85C2A",
         "stroke": "#3B2418",
         "strokeWidth": 1
@@ -53,41 +57,32 @@
         "y": {
           "field": "state",
           "type": "nominal",
-          "sort": "-x",
+          "sort": {
+            "field": "cafes_per_100k",
+            "order": "descending"
+          },
           "title": null
         },
         "x": {
-          "field": "Cafe density",
+          "field": "cafes_per_100k",
           "type": "quantitative",
           "title": "Cafés per 100k people",
           "scale": {
             "domain": [0, 50]
+          },
+          "axis": {
+            "labelFont": "Inter, Arial",
+            "titleFont": "Inter, Arial",
+            "labelFontSize": 11,
+            "titleFontSize": 12,
+            "grid": true
           }
         },
         "tooltip": [
-          {
-            "field": "state_full",
-            "type": "nominal",
-            "title": "State"
-          },
-          {
-            "field": "cafe_count",
-            "type": "quantitative",
-            "title": "Café count",
-            "format": ","
-          },
-          {
-            "field": "population",
-            "type": "quantitative",
-            "title": "Population",
-            "format": ","
-          },
-          {
-            "field": "Cafe density",
-            "type": "quantitative",
-            "title": "Cafés per 100k",
-            "format": ".2f"
-          }
+          {"field": "state_full", "type": "nominal", "title": "State"},
+          {"field": "cafe_count", "type": "quantitative", "title": "Cafés", "format": ","},
+          {"field": "population", "type": "quantitative", "title": "Population", "format": ","},
+          {"field": "cafes_per_100k", "type": "quantitative", "title": "Cafés per 100k", "format": ".2f"}
         ]
       }
     },
@@ -96,6 +91,7 @@
         "type": "text",
         "align": "left",
         "dx": 8,
+        "font": "Inter, Arial",
         "fontSize": 11,
         "fontWeight": "bold",
         "color": "#3B2418"
@@ -104,14 +100,17 @@
         "y": {
           "field": "state",
           "type": "nominal",
-          "sort": "-x"
+          "sort": {
+            "field": "cafes_per_100k",
+            "order": "descending"
+          }
         },
         "x": {
-          "field": "Cafe density",
+          "field": "cafes_per_100k",
           "type": "quantitative"
         },
         "text": {
-          "field": "Cafe density",
+          "field": "cafes_per_100k",
           "type": "quantitative",
           "format": ".1f"
         }
@@ -120,13 +119,12 @@
   ],
   "config": {
     "background": "#FFFDF8",
-    "view": {
-      "stroke": null
-    },
+    "view": {"stroke": null},
+    "font": "Inter, Arial",
     "axis": {
-      "grid": false,
-      "labelFontSize": 11,
-      "titleFontSize": 12
+      "gridColor": "#ead9c7",
+      "labelColor": "#5C4737",
+      "titleColor": "#3B2415"
     }
   }
 }
