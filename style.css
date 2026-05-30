@@ -408,3 +408,75 @@ h3{
     padding:44px 18px;
   }
 }
+
+/* Final chart sizing balance */
+
+/* Default cards: reduce empty space */
+.card{
+  min-height:auto;
+  padding:18px;
+}
+
+/* Make full-width charts larger */
+.chart-full .card{
+  min-height:auto;
+}
+
+.chart-full .vega-embed svg{
+  width:100%;
+}
+
+/* Paired charts should fill card width */
+.chart-pair .card{
+  min-height:auto;
+}
+
+/* Maps: reduce card height */
+#vis1,
+#vis2,
+#vis11{
+  min-height:300px;
+}
+
+#vis1 + details,
+#vis2 + details,
+#vis11 + details{
+  margin-bottom:0;
+}
+
+/* Bigger analytical charts */
+#vis4,
+#vis5,
+#vis7,
+#vis10{
+  min-height:360px;
+}
+
+/* Wide charts */
+#vis6,
+#vis13{
+  min-height:430px;
+}
+
+/* Treemap and network */
+#vis9,
+#vis12{
+  min-height:350px;
+}
+
+/* Horizon chart needs horizontal space */
+#vis8{
+  min-height:340px;
+}
+
+/* Stop extra blank vertical space inside embeds */
+.vega-embed{
+  display:block;
+  width:100%;
+}
+
+.vega-embed svg{
+  display:block;
+  max-width:100%;
+  height:auto;
+}
