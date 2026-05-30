@@ -8,8 +8,8 @@
   },
   "hconcat": [
     {
-      "width": 820,
-"height": 320,
+      "width": 900,
+"height": 360,
       "data": {
         "url": "data/state_culture_score.csv"
       },
