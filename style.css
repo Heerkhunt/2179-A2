@@ -143,12 +143,15 @@ h3 {
 }
 
 #vis1,#vis2,#vis3,#vis4,#vis5,
-#vis7,#vis8,#vis9,#vis10,#vis11,#vis12{
+#vis7,#vis9,#vis10,#vis11,#vis12{
   min-height:320px;
 }
 
 #vis6,#vis13{
   min-height:380px;
+}
+#vis8 {
+  min-height: 330px;
 }
 
 /* Prevent legends and labels from creating horizontal scroll */
